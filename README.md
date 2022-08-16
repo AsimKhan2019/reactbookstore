@@ -43,7 +43,6 @@ Create new folders and add seperate js files in the relevant folder
 ### Usage
 All the required folders and files are added to the application tree
 Once the project is approved, run a sync changes on all branches to update
-Run gh deploy pages to deploy your page to the github
 
 ### Run tests
 Create a pull request 

@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
 import AddBook from './AddBook';
+import Book from './Book';
 
 const Books = () => {
-  const [books, setBooks] = useState({
-    id: 1,
-    title: 'This is my book',
-    author: 'Written by me',
-  });
+  const [books] = useState([
+    {
+      id: 1,
+      title: 'This is my book',
+      author: 'Written by me',
+    },
+    {
+      id: 2,
+      title: 'This is my second book',
+      author: 'Written also by me',
+    },
+  ]);
 
-  const getBooks = () => {
-    setBooks({ id: 1, title: 'This is my book', author: 'Written by me' });
-  };
-
-  const { id, title, author } = books;
   return (
     <div className="container">
       <h1>Book List</h1>
-      <div className="list" onLoad={getBooks}>
-        <ul>
-          <li>
-            <span>{id}</span>
-            <span> </span>
-            <span>{title}</span>
-            <span> </span>
-            <span>{author}</span>
-          </li>
-        </ul>
+      <div className="list">
+        {books.map((book) => (
+          <Book key={book.id} title={book.title} author={book.author} />
+        ))}
       </div>
       <AddBook />
     </div>
