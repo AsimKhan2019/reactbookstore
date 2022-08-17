@@ -7,7 +7,6 @@ const AddBook = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted');
     dispatch(addBooktolist(e.target.title.value, e.target.author.value));
     e.target.reset();
   };
