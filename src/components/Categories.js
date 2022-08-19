@@ -11,7 +11,7 @@ const Categories = () => {
         {categoryStatus}
       </p>
 
-      <button type="button" onClick={() => dispatch(getBookStatus())}>
+      <button className="chapterbutton" type="button" onClick={() => dispatch(getBookStatus())}>
         Check Status
       </button>
     </div>

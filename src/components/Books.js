@@ -9,7 +9,6 @@ const Books = () => {
 
   return (
     <div className="container">
-      <h1>Book List</h1>
       <div className="list">
         <Book bookDetails={bookLists} />
       </div>
