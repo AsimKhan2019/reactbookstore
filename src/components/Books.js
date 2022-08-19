@@ -6,11 +6,7 @@ import Book from './Book';
 
 const Books = () => {
   const bookLists = useSelector((state) => state.books);
-  // const bookLists = useSelector(getAllBooks);
-  // const dispatch = useDispatch();
-
-  // useEffect(() => dispatch(fetchBooks()), []);
-
+  
   return (
     <div className="container">
       <h1>Book List</h1>
