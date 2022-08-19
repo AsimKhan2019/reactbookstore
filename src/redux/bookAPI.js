@@ -19,12 +19,6 @@ export default class BookAPI {
         });
         return bookArr;
       });
-    // .then((books) => {
-    //   console.log('Fetched books inside: ', books.length);
-    //   return books;
-    // });
-    // console.log('Fetched books: ', bookArr.length);
-    // return bookArr;
   };
 
   static deleteBook = async (bookId) => {
