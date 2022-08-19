@@ -20,17 +20,19 @@ body {
   box-shadow: 0 0 5px #ccc;
 }
 
-.nav { 
+.nav {
   display: flex;
-  /*width: 100%;*/
+
+  /* width: 100%; */
   float: left;
   margin: 12px;
 }
 
 .nav img {
-  max-width:50%;
+  max-width: 50%;
   height: auto;
-  /*margin-left: 35px;*/
+
+  /* margin-left: 35px; */
 }
 
 .navigation {
@@ -41,16 +43,25 @@ body {
   overflow: hidden;
 }
 
+.navigation ul li a {
+  color: inherit;
+}
+
+.navigation ul li a:hover {
+  color: inherit;
+}
+
+.navigation ul li a:visited {
+  color: inherit;
+}
+
+.navigation ul li a:active {
+  color: inherit;
+}
+
 .navigation ul li {
   display: inline-block;
   margin-left: 45px;
-}
-
-.navigation ul li a, 
-a:active, 
-a:hover, 
-a:visited  {
-  color: inherit
 }
 
 .login {
@@ -62,8 +73,4 @@ a:visited  {
 .login img {
   max-width: 70%;
   height: auto;
-}
-
-.book {
-  
 }
