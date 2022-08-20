@@ -2,18 +2,18 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import BookAPI from '../bookAPI';
 
 // Setting Actions and Reducers for the Books
-const ADD_BOOK = 'ADD_BOOK/fulfilled';
-const REMOVE_BOOK = 'REMOVE_BOOK/fulfilled';
+const ADD_BOOK = 'ADD_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
 const GET_BOOKS = 'GET_BOOKS';
 
 const initialBookArray = [];
 
 const bookReducer = (state = initialBookArray, action) => {
   switch (action.type) {
-    case ADD_BOOK:
+    case 'ADD_BOOK/fulfilled':
       return [...state, action.payload];
 
-    case REMOVE_BOOK:
+    case 'REMOVE_BOOK/fulfilled':
       return [
         ...state.filter((book) => (book.id) !== action.payload),
       ];

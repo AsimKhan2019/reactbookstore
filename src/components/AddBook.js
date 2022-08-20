@@ -19,8 +19,8 @@ const AddBook = () => {
 
   return (
     <div className="entry">
+      <h2>ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
-        <h1>Add New Book</h1>
         <input type="text" name="title" placeholder="Enter title of the book" id="title" />
         <input type="text" name="author" placeholder="Enter author name" id="author" />
         <button type="submit">Add Book</button>

@@ -8,12 +8,13 @@ const Books = () => {
   const bookLists = useSelector((state) => state.books);
 
   return (
-    <div className="container">
-      <h1>Book List</h1>
-      <div className="list">
+    <div className="main-content">
+      <section className="list">
         <Book bookDetails={bookLists} />
-      </div>
-      <AddBook />
+      </section>
+      <section>
+        <AddBook />
+      </section>
     </div>
   );
 };
