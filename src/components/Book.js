@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { Progress } from 'antd';
-import 'antd/dist/antd.css';
+// import { Progress } from 'antd';
+// import 'antd/dist/antd.css';
 import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => {
@@ -11,31 +11,37 @@ const Book = (props) => {
     props.bookDetails.map((book) => (
       <div className="book" key={book.id}>
         <div className="details">
-          <span className="left title">{book.title}</span>
-          <div className="clr" />
-          <span className="left">{book.author}</span>
-          <div className="clr" />
-          <span className="left"><button className="remove" type="button" value="remove" onClick={() => dispatch(deleteBook(book.id))}>Remove Book</button></span>
+          {/* <span className="left title">{book.title}</span> */}
+          <h3>Category</h3>
+          <h2>{book.title}</h2>
+          <h4>{book.author}</h4>
+          <ul>
+            <li>Comments</li>
+            <li>
+              <button type="button" value="remove" onClick={() => dispatch(deleteBook(book.id))}>Remove Book</button>
+            </li>
+            <li>
+              Edit
+            </li>
+          </ul>
         </div>
         <div className="percentage">
-          <Progress type="circle" percent={Math.floor(Math.random() * 10)} />
+          <div className="spinner" />
           <div>
-            <span className="highlight">
-              {Math.floor(Math.random() * 10)}
+            <h2>
+              {Math.floor(Math.random() * 100)}
               %
-              Completed
-            </span>
+            </h2>
+            <p>Completed</p>
           </div>
         </div>
         <div className="chapters">
-          <span className="left title">Current Chapter</span>
-          <div className="clr" />
-          <span className="left">
+          <h3>Current Chapter</h3>
+          <h4>
             Chapter
             {Math.floor(Math.random() * 10)}
-          </span>
-          <div className="clr" />
-          <span className="left"><button className="chapterbutton" type="button">Update Chapter</button></span>
+          </h4>
+          <button type="button">Update Chapter</button>
         </div>
       </div>
     )));
